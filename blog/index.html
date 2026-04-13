@@ -1,21 +1,99 @@
-bash
-
-cat /mnt/user-data/outputs/blog-index.html | wc -l
-# Check the file is intact
-head -3 /mnt/user-data/outputs/blog-index.html
-tail -3 /mnt/user-data/outputs/blog-index.html
-Output
-99
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Senior Care Marketing & Census Building | CareFlow Leads</title>
+<meta name="description" content="Expert guidance on senior care marketing, assisted living census building, Medicare Advantage referrals, and occupancy growth strategies for operators doing $3M–$500M in revenue.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://careflowleads.com/blog/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"CareFlow Leads Blog","description":"Senior care marketing, census building, and occupancy growth strategies for assisted living operators.","url":"https://careflowleads.com/blog/","publisher":{"@type":"Organization","name":"CareFlow Leads","url":"https://careflowleads.com"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sage:#5C8A78;--sage-dark:#3D6B58;--sage-light:#A8CCBE;--sage-pale:#E8F4EE;--cream:#FAF8F3;--warm-white:#FDFCF9;--charcoal:#1E1E24;--slate:#4A4A55;--muted:#8A8A96;--gold:#C4974A;--border:rgba(92,138,120,0.15)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal)}
+nav{position:sticky;top:0;z-index:100;padding:16px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(253,252,249,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;text-decoration:none;color:var(--charcoal)}
+.nav-logo span{color:var(--sage-dark)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--slate);font-size:13px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--sage-dark)}
+.nav-cta{background:var(--sage-dark)!important;color:white!important;padding:9px 22px;border-radius:2px;font-size:12px!important;letter-spacing:.8px;text-transform:uppercase}
+.blog-hero{padding:72px 80px 56px;border-bottom:1px solid var(--border)}
+.blog-eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--sage-dark);font-weight:500;margin-bottom:14px}
+.blog-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:300;line-height:1.06;letter-spacing:-1px;margin-bottom:16px}
+.blog-hero h1 em{font-style:italic;color:var(--sage-dark)}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:520px;line-height:1.7;font-weight:300}
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:56px 80px 80px;max-width:1200px}
+.post-card{background:white;border:1px solid var(--border);border-radius:16px;padding:32px;text-decoration:none;color:inherit;transition:all .3s;display:block}
+.post-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.06);border-color:var(--sage)}
+.post-tag{display:inline-block;background:var(--sage-pale);color:var(--sage-dark);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;font-weight:500;margin-bottom:16px}
+.post-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;line-height:1.2;margin-bottom:12px;letter-spacing:-.3px}
+.post-excerpt{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:18px}
+.post-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted);padding-top:16px;border-top:1px solid var(--border)}
+
+.cs-badge{font-size:10px;padding:2px 8px;border-radius:20px;background:var(--cream);color:var(--muted);border:1px solid var(--border);margin-left:8px}
+footer{background:var(--charcoal);padding:40px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:white}
+.footer-logo span{color:var(--sage-light)}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.25)}
+.footer-link{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
+.footer-link:hover{color:white}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Care<span>Flow</span> Leads</a>
+  <div class="nav-links">
+    <a href="/#why">Why CareFlow</a>
+    <a href="/#how">How It Works</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#contact" class="nav-cta">Free Audit</a>
+  </div>
+</nav>
+<div class="blog-hero">
+  <div class="blog-eyebrow">The CareFlow Blog</div>
+  <h1>Fill beds. Grow census.<br><em>Own your market.</em></h1>
+  <p>Expert guidance on senior care marketing, Medicare Advantage referrals, Google Ads strategy, and occupancy growth for operators doing $3M–$500M in revenue.</p>
+</div>
+<div class="blog-grid">
+  <a href="/blog/how-to-fill-assisted-living-beds" class="post-card">
+    <div class="post-tag">Census Building</div>
+    <div class="post-title">How to Fill Assisted Living Beds Faster in 2025</div>
+    <p class="post-excerpt">Most facilities run at 78–82% occupancy. Here's the exact 5-channel system operators use to close that gap — including the CMS rating monitoring trick nobody talks about.</p>
+    <div class="post-meta"><span>CareFlow Leads</span><span>·</span><span>April 12, 2025</span><span>·</span><span>8 min read</span></div>
+  </a>
+  <a href="/blog/assisted-living-marketing-cost.html" class="post-card">
+    <div class="post-tag">Pricing </div>
+    <div class="post-title">How Much Does Assisted Living Marketing Cost in 2025?</div>
+    <p class="post-excerpt">A transparent breakdown of every channel — Google Ads, Facebook, Google LSA, and managed services — with real CPL benchmarks for the senior care market.</p>
+    <div class="post-meta"><span>CareFlow Leads</span><span>·</span><span>April 13, 2025</span></div>
+  </a>
+  <a href="/blog/medicare-advantage-referrals-guide.html" class="post-card">
+    <div class="post-tag">Referrals </div>
+    <div class="post-title">Medicare Advantage Referrals for Assisted Living: A Complete Guide</div>
+    <p class="post-excerpt">MA care coordinators convert at 60–80% and cost nothing per referral. Here's how to build and maintain relationships with every MA plan in your market.</p>
+    <div class="post-meta"><span>CareFlow Leads</span><span>·</span><span>April 13, 2025</span></div>
+  </a>
+  <a href="/blog/why-assisted-living-not-on-google.html" class="post-card">
+    <div class="post-tag">SEO </div>
+    <div class="post-title">Why Your Assisted Living Facility Isn't Showing on Google</div>
+    <p class="post-excerpt">5 specific technical and content reasons your facility is invisible to families searching online — and exactly how to fix each one.</p>
+    <div class="post-meta"><span>CareFlow Leads</span><span>·</span><span>April 13, 2025</span></div>
+  </a>
+</div>
+<footer>
+  <div class="footer-logo">Care<span>Flow</span> Leads</div>
+  <div>
+    <a href="/" class="footer-link" style="margin-right:24px">Home</a>
+    <a href="/#contact" class="footer-link">Get Free Audit</a>
+  </div>
+  <div class="footer-copy">© 2025 CareFlow Leads. A division of T&G Revenue Group.</div>
 </footer>
-</body>
-</html>
-bash
-cat /mnt/user-data/outputs/blog-how-to-fill-assisted-living-beds.html | wc -l
-tail -3 /mnt/user-data/outputs/blog-how-to-fill-assisted-living-beds.html
-Output
-355
 </body>
 </html>
