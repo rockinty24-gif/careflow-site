@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FNDX9NEBQM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FNDX9NEBQM');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -312,6 +303,12 @@ h2 em { font-style:italic; color:var(--sage-dark); }
 .cta-h2 em { font-style:italic; color:var(--sage-dark); }
 .cta-p { font-size:16px; color:var(--muted); max-width:480px; margin:0 auto 44px; line-height:1.75; font-weight:300; }
 .cta-form { display:flex; gap:12px; max-width:480px; margin:0 auto; }
+.cta-form-full { max-width:640px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+.cta-row { display:flex; gap:12px; }
+.cta-row .cta-input { flex:1; }
+.cta-submit-full { width:100%; padding:18px; font-size:13px; margin-top:4px; }
+.cta-select { color:var(--slate); cursor:pointer; }
+.cta-select option { color:var(--charcoal); }
 .cta-input { flex:1; padding:16px 20px; border:1px solid var(--border); border-radius:2px; font-size:14px; font-family:'DM Sans',sans-serif; outline:none; background:white; transition:border-color 0.2s; }
 .cta-input:focus { border-color:var(--sage); }
 .cta-submit { background:var(--sage-dark); color:white; border:none; padding:16px 32px; font-size:12px; letter-spacing:1px; text-transform:uppercase; font-weight:500; border-radius:2px; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background 0.2s; white-space:nowrap; }
@@ -340,7 +337,7 @@ footer { background:var(--charcoal); padding:64px 80px 40px; }
     <a href="#why">Why CareFlow</a>
     <a href="#how">How It Works</a>
     <a href="#strategy">Our Strategy</a>
-    <a href="/blog/index.html">Blog</a>
+    <a href="/blog/">Blog</a>
     <a href="#results">Results</a>
     <a href="#pricing">Pricing</a>
     <a href="#contact" class="nav-cta">Get Free Audit</a>
@@ -843,10 +840,42 @@ footer { background:var(--charcoal); padding:64px 80px 40px; }
 <section class="cta-section" id="contact">
   <h2 class="cta-h2">Ready to fill every<br><em>bed?</em></h2>
   <p class="cta-p">Book a free 30-minute census audit. We'll analyze your facility, your market, and your current occupancy — and show you exactly what's possible.</p>
-  <div class="cta-form">
-    <input type="email" class="cta-input" placeholder="Your work email">
-    <button class="cta-submit">Book Free Audit</button>
-  </div>
+  <form class="cta-form-full" action="https://formspree.io/f/xlgagzav" method="POST">
+    <div class="cta-row">
+      <input type="text" name="name" class="cta-input" placeholder="Your name" required>
+      <input type="email" name="email" class="cta-input" placeholder="Work email" required>
+    </div>
+    <div class="cta-row">
+      <input type="tel" name="phone" class="cta-input" placeholder="Phone number">
+      <input type="text" name="facility" class="cta-input" placeholder="Facility or company name">
+    </div>
+    <div class="cta-row">
+      <select name="state" class="cta-input cta-select">
+        <option value="" disabled selected>Select your state</option>
+        <option>Maryland</option>
+        <option>Virginia</option>
+        <option>Washington DC</option>
+        <option>Florida</option>
+        <option>Texas</option>
+        <option>California</option>
+        <option>Ohio</option>
+        <option>Other</option>
+      </select>
+      <select name="care_type" class="cta-input cta-select">
+        <option value="" disabled selected>Type of care facility</option>
+        <option>Assisted Living</option>
+        <option>Memory Care</option>
+        <option>Home Health</option>
+        <option>Hospice</option>
+        <option>Independent Living</option>
+        <option>Personal Injury Law Firm</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <input type="hidden" name="_subject" value="New CareFlow Census Audit Request">
+    <input type="hidden" name="_replyto" value="hello@careflowleads.com">
+    <button type="submit" class="cta-submit cta-submit-full">Book My Free Census Audit</button>
+  </form>
   <p class="cta-note">No commitment required. We'll show you the opportunity before you spend a dollar.</p>
 </section>
 
@@ -868,7 +897,7 @@ footer { background:var(--charcoal); padding:64px 80px 40px; }
       <h4>Company</h4>
       <a href="#">About CareFlow</a>
       <a href="#">Case Studies</a>
-      <a href="#">Blog</a>
+      <a href="/blog/">Blog</a>
       <a href="#">Careers</a>
     </div>
     <div class="footer-col">
@@ -878,5 +907,11 @@ footer { background:var(--charcoal); padding:64px 80px 40px; }
       <a href="#">LinkedIn</a>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2025 CareFlow Leads. All righ
+    <div class="footer-bottom">
+    <span>© 2025 CareFlow Leads. All rights reserved.</span>
+    <span class="footer-parent">A division of <a href="https://tgrevenue.com">T&amp;G Revenue Group</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
